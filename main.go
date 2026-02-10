@@ -2,6 +2,8 @@ package main // main package entry package of go lang
 
 import (
 	"fmt"
+	"golangforfun/myutil"
+	"golangforfun/printexamples"
 )
 
 func main() { // main method is the entry point in the program should always be in main package.
@@ -31,5 +33,15 @@ func main() { // main method is the entry point in the program should always be 
 	const pi = 3.141
 	// pi = 3.142 // not allowed
 	fmt.Println(pi)
+
+	var Public = "this variable starts with capital letter thus can be used outside this package"
+	var private = "this variable starts with small letter thus can NOT be used outside this package"
+	fmt.Println(Public)
+	fmt.Println(private)
+
+	myutil.PublicMyUtilFunction()
+	// myutil.privateMyUtilFunction() // is not callable
+	myutil.PublicFunctionCallingPrivateFunction()
+	printexamples.PrintExamples()
 
 }
